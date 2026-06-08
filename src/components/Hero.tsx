@@ -3,8 +3,11 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, ShieldCheck, Award, TrendingUp } from 'lucide-react';
 
 const heroBgImage = '/src/assets/images/corporate_hero_bg_1780938038462.png';
+const fallbackImage = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80';
 
 export default function Hero() {
+  const [imgSrc, setImgSrc] = React.useState(heroBgImage);
+
   const handleRequestConsulting = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const contactSection = document.getElementById('contactos');
@@ -148,7 +151,8 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B2C6B]/50 via-transparent to-[#1E5AA8]/20 mix-blend-multiply" />
               
               <img
-                src={heroBgImage}
+                src={imgSrc}
+                onError={() => setImgSrc(fallbackImage)}
                 alt="SC Estudos Escritório Moderno"
                 className="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover hover:scale-105 duration-700 transition-transform"
                 referrerPolicy="no-referrer"

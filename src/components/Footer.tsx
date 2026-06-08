@@ -193,7 +193,7 @@ export default function Footer() {
             &copy; {currentYear} SC - ESTUDOS, CONSULTORIA &amp; CONTABILIDADE, LDA. Todos os direitos reservados.
           </p>
           <p className="mt-2 md:mt-0 text-[10px] text-slate-600">
-            Huambo, Angola • Excelência em Consultoria Corporativa.
+            Huambo, Angola • Autor: Jaime de Paulo • Excelência em Consultoria Corporativa.
           </p>
         </div>
 
